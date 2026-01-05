@@ -24,6 +24,10 @@ const db = new pg.Client({
 
 await db.connect();
 
+
+
+
+
 /* ==========================
    CREATE TABLES (ADDED)
 ========================== */

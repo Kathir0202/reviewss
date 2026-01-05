@@ -1,0 +1,83 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Body Background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* same gradient as review page */
+  color: #fff;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background: #1e1e2f; /* dark container */
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* Heading */
+.container h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #00d2ff; /* subtle accent */
+  letter-spacing: 1px;
+}
+
+/* Button */
+.container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00d2ff, #00ffa6); /* subtle gradient */
+  color: #1e1e2f;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,255,166,0.5);
+  text-decoration: none;
+}
+
+/* Make the anchor behave like a block button */
+.container a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 20px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+
+  .container button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

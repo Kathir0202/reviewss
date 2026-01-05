@@ -12,17 +12,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark background */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* your requested gradient */
   color: #fff;
   padding: 20px;
 }
 
 /* Container */
 .container {
-  background: #1e1e2f; /* dark grey container */
+  background: #1e1e2f;
   padding: 35px 30px;
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
   text-align: center;
@@ -33,59 +33,52 @@ body {
   margin-bottom: 25px;
   font-size: 28px;
   font-weight: bold;
-  color:  #00d2ff; /* subtle colourful accent */
+  color: #00d2ff; /* subtle accent */
   letter-spacing: 1px;
 }
 
-/* Instagram Logo */
-#logo svg {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 15px;
-  fill: #00d2ff; /* matching accent */
-}
-
-/* Inputs */
-.container input[type="text"],
-.container input[type="password"] {
+/* Textarea */
+.container textarea {
   width: 100%;
-  padding: 12px 45px 12px 12px; /* space for eye SVG */
-  margin: 12px 0;
-  border: 2px solid #333;
+  padding: 12px;
   border-radius: 10px;
-  font-size: 14px;
-  transition: 0.3s;
-  position: relative;
+  border: 2px solid #333;
+  background: #2c2c3e;
   color: #fff;
-  background: #2c2c3e; /* dark input background */
+  font-size: 14px;
+  resize: vertical;
+  transition: 0.3s;
 }
 
-/* Input focus */
-.container input:focus {
-  border-color: #00d2ff; /* accent on focus */
+.container textarea:focus {
+  border-color: #00d2ff;
   outline: none;
   box-shadow: 0 0 8px rgba(0,210,255,0.4);
 }
 
-/* Password field container */
-.input-box {
-  position: relative;
-  width: 100%;
+/* Star rating */
+.stars {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 5px;
 }
 
-/* Eye SVG inside password */
-.input-box svg {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 28px;
+  color: #444;
   cursor: pointer;
-  fill: #00d2ff; /* subtle accent */
   transition: 0.3s;
 }
 
-.input-box svg:hover {
-  fill: #00ffa6; /* hover accent */
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #00d2ff; /* accent color for stars */
 }
 
 /* Button */
@@ -96,7 +89,7 @@ body {
   border: none;
   border-radius: 30px;
   background: linear-gradient(135deg, #00d2ff, #00ffa6); /* subtle gradient */
-  color: #121212;
+  color: #1e1e2f;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -125,14 +118,17 @@ body {
     font-size: 24px;
   }
 
+  .container textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
   .container button {
     font-size: 15px;
     padding: 10px;
   }
 
-  .container input[type="text"],
-  .container input[type="password"] {
-    font-size: 13px;
-    padding: 10px 40px 10px 10px;
+  .stars label {
+    font-size: 24px;
   }
 }
